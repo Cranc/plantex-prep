@@ -4,6 +4,7 @@
 # - trailing whitespaces (not allowed)
 # - single trailing newline (required)
 # - bad windows/mac line endings
+# - tab characters
 # - lines longer than XX chars
 
 # config
@@ -75,6 +76,27 @@ else
     echo "!!! Some lines were found. Please use unix line endings!"
     ERROR=1
 fi
+
+## windows and mac OS line endings =======================
+echo ""
+echo "=== Searching for files with tab chars ==================="
+
+FOUNDTAB=0
+for f in $(find $FOLDER -regex $FILES); do
+    if grep -q $'\t' $f ; then
+        echo "! Has tab character: $f"
+        FOUNDTAB=1
+    fi
+done
+
+if [ $FOUNDTAB -eq 0 ] ; then
+    echo "=== None found! :-)"
+else
+    echo ""
+    echo "!!! Some files were found. Please indent with spaces only!"
+    ERROR=1
+fi
+
 
 
 ### char limit ===================================
