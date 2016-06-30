@@ -2,21 +2,29 @@
     "folders":
     [
         {
-            "path": ".",
-            "folder_exclude_patterns": ["target"],
-            "file_exclude_patterns": [
+            "file_exclude_patterns":
+            [
                 "*.lock",
                 "LICENSE-*",
                 "*.rs.bk",
                 "*.sublime-*"
-            ]
+            ],
+            "folder_exclude_patterns":
+            [
+                "target"
+            ],
+            "path": "."
         }
     ],
     "settings":
     {
+        "rulers":
+        [
+            80,
+            100
+        ],
         "tab_size": 4,
         "translate_tabs_to_spaces": true,
-        "use_tab_stops": true,
-        "rulers": [80, 100]
+        "use_tab_stops": true
     }
 }
