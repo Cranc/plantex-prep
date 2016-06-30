@@ -5,3 +5,6 @@ name = "plantex-prep-server"
 version = "0.1.0"
 
 [dependencies]
+
+[dependencies.plantex-prep-common]
+path = "../common"
