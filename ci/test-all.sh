@@ -3,8 +3,8 @@
 # This file needs to be run from the git root directory!
 
 
-echo "Testing 'common'..."
-cd common
+echo "Testing 'base'..."
+cd base
 cargo test -v
 cd ..
 

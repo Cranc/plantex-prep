@@ -6,5 +6,5 @@ version = "0.1.0"
 
 [dependencies]
 
-[dependencies.plantex-prep-common]
-path = "../common"
+[dependencies.plantex-prep-base]
+path = "../base"

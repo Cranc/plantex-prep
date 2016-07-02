@@ -3,8 +3,8 @@
 # This file needs to be run from the git root directory!
 
 
-echo "Building 'common'..."
-cd common
+echo "Building 'base'..."
+cd base
 cargo build -v
 cd ..
 
