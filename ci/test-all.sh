@@ -7,19 +7,9 @@ set -o errexit -o nounset
 
 export RUSTFLAGS="--deny warnings"
 
-echo "Testing 'base'..."
-cd base
-cargo test -v
-cd ..
-
-
-echo "Testing 'client'..."
-cd client
-cargo test -v
-cd ..
-
-
-echo "Testing 'server'..."
-cd server
-cargo test -v
-cd ..
+for crate in base client server plantex; do
+    echo "Building $crate..."
+    cargo build -p $crate
+    echo "Testing $crate..."
+    cargo test -p $crate
+done
