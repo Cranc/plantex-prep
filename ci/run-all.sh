@@ -8,13 +8,13 @@ MY_PATH="`dirname \"$0\"`"
 # basic style check
 $MY_PATH/check-basic-style.sh
 
-# basic style check
+# check that everything is formatted with rustfmt
 $MY_PATH/check-rustfmt.sh
 
-# basic style check
+# check that everything compiles
 $MY_PATH/build-all.sh
 
-# basic style check
+# check that all tests pass
 $MY_PATH/test-all.sh
 
 
