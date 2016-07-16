@@ -11,10 +11,7 @@ $MY_PATH/check-basic-style.sh
 # check that everything is formatted with rustfmt
 $MY_PATH/check-rustfmt.sh
 
-# check that everything compiles
-$MY_PATH/build-all.sh
-
-# check that all tests pass
+# check that everything compiles and all tests pass
 $MY_PATH/test-all.sh
 
 
