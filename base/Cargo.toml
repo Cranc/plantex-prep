@@ -5,3 +5,4 @@ name = "plantex-prep-base"
 version = "0.1.0"
 
 [dependencies]
+num-traits = "0.1.33"
