@@ -1,0 +1,20 @@
+[package]
+authors = ["Lukas Kalbertodt <lukas.kalbertodt@gmail.com>"]
+license = "MIT/Apache-2.0"
+name = "plantex"
+version = "0.1.0"
+
+[[bin]]
+name = "plantex"
+path = "plantex/main.rs"
+
+[[bin]]
+name = "plantex-server"
+path = "plantex-server/main.rs"
+
+
+[dependencies]
+base = { path = "base" }
+client = { path = "client" }
+server = { path = "server" }
+glium = "0.14.0"

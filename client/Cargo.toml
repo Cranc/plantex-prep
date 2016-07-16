@@ -1,11 +1,10 @@
 [package]
 authors = ["Lukas Kalbertodt <lukas.kalbertodt@gmail.com>"]
 license = "MIT/Apache-2.0"
-name = "plantex-prep"
+name = "client"
 version = "0.1.0"
+publish = false
 
 [dependencies]
 glium = "0.14.0"
-
-[dependencies.plantex-prep-base]
-path = "../base"
+base = { path = "../base" }
