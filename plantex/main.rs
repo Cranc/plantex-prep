@@ -1,3 +1,4 @@
+
 extern crate base;
 extern crate client;
 extern crate env_logger;
@@ -26,9 +27,9 @@ fn main() {
     if res.is_err() {
         // Maybe the user disabled all logs, so we mention that the logs
         // contain information about the error.
-        write!(io::stderr(),
-               "{}",
-               Color::Red.paint("An error occured! Check logs for more information!"))
+        writeln!(io::stderr(),
+                 "{}",
+                 Color::Red.paint("An error occured! Check logs for more information!"))
             .expect("write to stderr failed");
         std::process::exit(1);
     }
