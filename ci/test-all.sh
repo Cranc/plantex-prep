@@ -2,6 +2,8 @@
 
 # This file needs to be run from the git root directory!
 
+# Exit script on the first error
+set -o errexit -o nounset
 
 echo "Testing 'base'..."
 cd base
