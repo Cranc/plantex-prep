@@ -98,13 +98,9 @@ fn test_axial_range() {
         curr: AxialPos::new(1, 1),
     };
 
-    assert_eq!(
-        r.collect::<Vec<_>>(),
-        vec![
-            AxialPos::new(1, 1),
-            AxialPos::new(2, 1),
-            AxialPos::new(1, 2),
-            AxialPos::new(2, 2)
-        ]
-    );
+    assert_eq!(r.collect::<Vec<_>>(),
+               vec![AxialPos::new(1, 1),
+                    AxialPos::new(2, 1),
+                    AxialPos::new(1, 2),
+                    AxialPos::new(2, 2)]);
 }

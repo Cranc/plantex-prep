@@ -9,9 +9,7 @@ pub struct World {
 
 impl World {
     pub fn empty() -> Self {
-        World {
-            chunks: AssocMap::new(),
-        }
+        World { chunks: AssocMap::new() }
     }
 }
 
@@ -22,10 +20,11 @@ impl ops::Index<AxialPos> for World {
         let chunk_pos = pos.to_vec() / (super::CHUNK_SIZE as i32);
 
         match self.chunks.get(&chunk_pos) {
-            None => panic!("chunk {:?} is not loaded (position request {:?})",
-                chunk_pos,
-                pos,
-            ),
+            None => {
+                panic!("chunk {:?} is not loaded (position request {:?})",
+                       chunk_pos,
+                       pos)
+            }
             Some(chunk) => {
                 let inner_pos: Vec2i = pos.to_vec() % (super::CHUNK_SIZE as i32);
                 &chunk[inner_pos.into()]

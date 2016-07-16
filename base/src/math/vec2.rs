@@ -10,25 +10,28 @@ pub struct Vec2<T> {
 
 impl<T> Vec2<T> {
     pub fn new(x: T, y: T) -> Self {
-        Vec2 {
-            x: x,
-            y: y,
-        }
+        Vec2 { x: x, y: y }
     }
 
-    pub fn zero() -> Self where T: Zero {
+    pub fn zero() -> Self
+        where T: Zero
+    {
         Vec2 {
             x: T::zero(),
             y: T::zero(),
         }
     }
 
-    pub fn convert<U>(self) -> Vec2<U> where U: From<T> + Clone {
+    pub fn convert<U>(self) -> Vec2<U>
+        where U: From<T> + Clone
+    {
         Vec2::new(self.x.into(), self.y.into())
     }
 }
 
-impl<T> fmt::Debug for Vec2<T> where T: fmt::Debug {
+impl<T> fmt::Debug for Vec2<T>
+    where T: fmt::Debug
+{
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         f.debug_tuple("")
             .field(&self.x)

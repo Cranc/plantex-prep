@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Exit script on the first error
+set -o errexit -o nounset
+
 echo ""
 echo "=== Checking Rust style with rustfmt... =============="
 
