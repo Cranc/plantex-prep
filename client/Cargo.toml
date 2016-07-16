@@ -2,9 +2,12 @@
 authors = ["Lukas Kalbertodt <lukas.kalbertodt@gmail.com>"]
 license = "MIT/Apache-2.0"
 name = "client"
-version = "0.1.0"
 publish = false
+version = "0.1.0"
 
 [dependencies]
-glium = "0.14.0"
-base = { path = "../base" }
+glium = "0.15.0"
+log = "0.3.6"
+
+[dependencies.base]
+path = "../base"
