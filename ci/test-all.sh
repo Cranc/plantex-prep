@@ -5,6 +5,8 @@
 # Exit script on the first error
 set -o errexit -o nounset
 
+export RUSTFLAGS="--deny warnings"
+
 echo "Testing 'base'..."
 cd base
 cargo test -v

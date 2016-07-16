@@ -1,7 +1,7 @@
 use std::collections::HashMap as AssocMap;
 use std::ops;
 use super::{AxialPos, Chunk, HexPillar};
-use math::{self, Vec2i};
+use math::Vec2i;
 
 pub struct World {
     chunks: AssocMap<Vec2i, Chunk>,
