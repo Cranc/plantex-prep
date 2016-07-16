@@ -1,13 +1,10 @@
-
 extern crate base;
 extern crate client;
 extern crate env_logger;
 #[macro_use]
 extern crate log;
 extern crate server;
-extern crate term_painter;
 
-use term_painter::{Color, ToStyle};
 use std::io::{self, Write};
 use log::LogLevelFilter;
 
@@ -28,8 +25,7 @@ fn main() {
         // Maybe the user disabled all logs, so we mention that the logs
         // contain information about the error.
         writeln!(io::stderr(),
-                 "{}",
-                 Color::Red.paint("An error occured! Check logs for more information!"))
+                 "An error occured! Check logs for more information!")
             .expect("write to stderr failed");
         std::process::exit(1);
     }
