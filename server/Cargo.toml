@@ -1,10 +1,9 @@
 [package]
 authors = ["Lukas Kalbertodt <lukas.kalbertodt@gmail.com>"]
 license = "MIT/Apache-2.0"
-name = "plantex-prep-server"
+name = "server"
 version = "0.1.0"
+publish = false
 
 [dependencies]
-
-[dependencies.plantex-prep-base]
-path = "../base"
+base = { path = "../base" }

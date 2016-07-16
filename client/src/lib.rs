@@ -1,4 +1,4 @@
-extern crate plantex_prep_base as base;
+extern crate base;
 extern crate glium;
 
 fn main() {

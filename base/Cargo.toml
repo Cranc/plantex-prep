@@ -1,8 +1,9 @@
 [package]
 authors = ["Lukas Kalbertodt <lukas.kalbertodt@gmail.com>"]
 license = "MIT/Apache-2.0"
-name = "plantex-prep-base"
+name = "base"
 version = "0.1.0"
+publish = false
 
 [dependencies]
 num-traits = "0.1.33"
