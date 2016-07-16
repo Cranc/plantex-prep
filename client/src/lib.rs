@@ -5,6 +5,7 @@ extern crate glium;
 extern crate log;
 
 pub mod render;
+pub mod event_manager;
 mod config;
 mod game;
 
