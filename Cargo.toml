@@ -15,7 +15,6 @@ path = "plantex-server/main.rs"
 [dependencies]
 env_logger = "0.3.4"
 log = "0.3.6"
-glium = "0.14.0"
 term-painter = "0.2.2"
 
 [dependencies.base]
