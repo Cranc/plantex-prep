@@ -8,7 +8,7 @@ export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 if ! type ghp-import > /dev/null; then
     echo ""
     echo "=== Installing ghp-import ================"
-    pip install ghp-import
+    pip install ghp-import --user
 fi
 
 if ! type rustfmt > /dev/null; then
