@@ -1,6 +1,10 @@
-# plantex-prep
+# plantex-prep [![Build Status](https://travis-ci.org/LukasKalbertodt/plantex-prep.svg?branch=master)](https://travis-ci.org/LukasKalbertodt/plantex-prep)
+
 Preparation repo for plantex
 
+[Client docs](https://lukaskalbertodt.github.io/plantex-prep/client/index.html)
+
+[Server docs](https://lukaskalbertodt.github.io/plantex-prep/server/index.html)
 
 ## License
 
