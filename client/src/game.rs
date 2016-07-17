@@ -29,7 +29,7 @@ fn create_context(config: &Config) -> Result<GlutinFacade, ()> {
     // TODO: OpenGL version/profile
     // TODO: vsync
     let context = glutin::WindowBuilder::new()
-        .with_dimensions(config.resolution.x, config.resolution.y)
+        .with_dimensions(config.resolution.width, config.resolution.height)
         .with_title(config.window_title.clone())
         .build_glium();
 

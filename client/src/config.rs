@@ -1,7 +1,7 @@
 use base::math::*;
 
 pub struct Config {
-    pub resolution: Vec2u,
+    pub resolution: Dimension2u,
     pub window_mode: WindowMode,
     pub window_title: String,
 }
@@ -9,7 +9,7 @@ pub struct Config {
 impl Default for Config {
     fn default() -> Self {
         Config {
-            resolution: Vec2::new(1280, 720),
+            resolution: Dimension2::new(1280, 720),
             window_mode: WindowMode::Windowed,
             window_title: format!("Plantex {}", env!("CARGO_PKG_VERSION")),
         }
