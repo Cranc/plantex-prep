@@ -9,8 +9,8 @@
 
 # config
 COLS=100
-FOLDER="."
-FILES='.+src/.+\.\(rs\|vert\|tesc\|tese\|geom\|frag\|comp\)'
+FOLDER="base client plantex plantex-server server"
+FILES='.+\.\(rs\|vert\|tesc\|tese\|geom\|frag\|comp\)'
 
 
 # Exit script on the first error
