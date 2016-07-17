@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["CHUNK_SIZE",""],["HEX_INNER_RADIUS",""],["HEX_OUTER_RADIUS",""],["PILLAR_STEP_HEIGHT",""]],"enum":[["GroundMaterial",""],["PropType",""]],"struct":[["Chunk",""],["HeightType","Represents one discrete height of a pillar section."],["HexPillar",""],["PillarSection",""],["Prop",""],["World",""]],"type":[["ChunkIndex",""]]});
