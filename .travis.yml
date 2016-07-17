@@ -5,7 +5,9 @@ sudo: false
 git:
   depth: 1
 before_script:
-  - ci/install-tools.sh
+  - |
+      export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH &&
+      ci/install-tools.sh
 script:
   - ci/run-all.sh
 after_success:

@@ -3,7 +3,7 @@
 # Exit script on the first error
 set -o errexit -o nounset
 
-export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
+# $PATH must be set correctly before invoking this
 
 if ! type ghp-import > /dev/null; then
     echo ""
@@ -16,3 +16,6 @@ if ! type rustfmt > /dev/null; then
     echo "=== Installing rustfmt ==============="
     cargo install rustfmt
 fi
+
+type ghp-import > /dev/null
+type rustfmt > /dev/null
