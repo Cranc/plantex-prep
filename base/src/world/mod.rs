@@ -4,13 +4,11 @@ mod chunk;
 mod ground;
 mod hex_pillar;
 mod world;
-mod pos;
 
 pub use self::chunk::Chunk;
 pub use self::ground::*;
 pub use self::hex_pillar::*;
 pub use self::world::World;
-pub use self::pos::AxialPos;
 
 pub const HEX_INNER_RADIUS: f32 = 3.0;
 pub const HEX_OUTER_RADIUS: f32 = HEX_INNER_RADIUS * (::math::SQRT_3 / 2.0);

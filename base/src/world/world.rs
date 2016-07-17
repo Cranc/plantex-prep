@@ -1,23 +1,28 @@
-use std::collections::HashMap as AssocMap;
+
+
+use std::collections::HashMap;
 use std::ops;
-use super::{AxialPos, Chunk, HexPillar};
-use math::Vec2i;
+use super::{Chunk, HexPillar};
+use math::*;
 
 pub struct World {
-    chunks: AssocMap<Vec2i, Chunk>,
+    chunks: HashMap<AxialPoint, Chunk>,
 }
 
 impl World {
     pub fn empty() -> Self {
-        World { chunks: AssocMap::new() }
+        World { chunks: HashMap::new() }
     }
 }
 
-impl ops::Index<AxialPos> for World {
+impl ops::Index<AxialPoint> for World {
     type Output = HexPillar;
 
-    fn index(&self, pos: AxialPos) -> &Self::Output {
-        let chunk_pos = pos.to_vec() / (super::CHUNK_SIZE as i32);
+    fn index(&self, pos: AxialPoint) -> &Self::Output {
+        // TODO: use `/` operator once it's implemented
+        // let chunk_pos = pos / (super::CHUNK_SIZE as i32);
+        let chunk_pos = AxialPoint::new(pos.q / (super::CHUNK_SIZE as i32),
+                                        pos.r / (super::CHUNK_SIZE as i32));
 
         match self.chunks.get(&chunk_pos) {
             None => {
@@ -26,8 +31,11 @@ impl ops::Index<AxialPos> for World {
                        pos)
             }
             Some(chunk) => {
-                let inner_pos: Vec2i = pos.to_vec() % (super::CHUNK_SIZE as i32);
-                &chunk[inner_pos.into()]
+                // TODO: use `%` operator once it's implemented
+                // let inner_pos = pos % (super::CHUNK_SIZE as i32);
+                let inner_pos = AxialPoint::new(pos.q % (super::CHUNK_SIZE as i32),
+                                                pos.r % (super::CHUNK_SIZE as i32));
+                &chunk[inner_pos]
             }
         }
     }
