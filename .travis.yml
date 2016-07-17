@@ -1,0 +1,11 @@
+language: rust
+rust: stable
+sudo: false
+git:
+  depth: 1
+before_script:
+  - ci/install-tools.sh
+script:
+  - ci/run-all.sh
+after_success:
+  - ci/upload-docs.sh
