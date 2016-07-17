@@ -1,4 +1,3 @@
-extern crate base;
 extern crate client;
 extern crate env_logger;
 #[macro_use]
