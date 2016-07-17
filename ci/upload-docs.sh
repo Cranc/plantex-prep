@@ -7,9 +7,9 @@ echo ""
 echo "=== Generating documentation ================="
 cargo doc
 
-if [ "$TRAVIS_BRANCH" == "master" ]; then
+if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     echo ""
     echo "=== Uploading docs ==============="
-    export TRAVIS_CARGO_NIGHTLY_FEATURE=
-    travis-cargo doc-upload
+    ghp-import -n target/doc
+    git push -qf https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
 fi

@@ -5,10 +5,10 @@ set -o errexit -o nounset
 
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
-if ! type travis-cargo > /dev/null; then
+if ! type ghp-import > /dev/null; then
     echo ""
-    echo "=== Installing travis-cargo ================"
-    pip install 'travis-cargo<0.2' --user
+    echo "=== Installing ghp-import ================"
+    pip install ghp-import
 fi
 
 if ! type rustfmt > /dev/null; then
