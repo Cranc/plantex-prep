@@ -14,7 +14,6 @@ $MY_PATH/check-rustfmt.sh
 # check that everything compiles and all tests pass
 $MY_PATH/test-all.sh
 
-
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "+              Everything is fine!                 +"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++"
